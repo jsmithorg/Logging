@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log>
+  <loggers>
+    <add key="customLogger" value="JSmith.Custom.CustomLogger" />
+  </loggers>
+  <targets>
+    <add name="debug" type="Debug" format="[ ${time} ][ ${level} ][ ${class}::${method}() ] ${message}" />
+    <add name="mail" type="Email" format="[ ${time} ][ ${class}::${method}() ] ${message}" />
+    <add name="sos" type="SOS" format="[ ${time} ][ ${class}::${method}() ] ${message}" />
+    <!--<add name="eventLog" type="EventLog" format="${message}" />-->
+  </targets>
+  <rules>
+    <add class="*" levels="Trace,Warn,Info" categories="*" targets="debug" />
+    <!--<add class="Tmobile.Framework.Rewrite.UrlRewriteModule" levels="Trace,Warn,Info" categories="*" targets="debug" />
+        <add class="Tmobile.Framework.Rewrite.UrlRewriter" levels="Trace,Warn,Info" categories="*" targets="debug" />
+        <add class="Tmobile.Framework.Location.UrlMapModule" levels="Warn" categories="*" targets="debug" />-->
+    <add class="*" levels="Error,Fatal" categories="*" targets="debug" />
+    <!--<add class="*" levels="Error,Fatal" categories="*" targets="eventLog" />-->
+  </rules>
+</log>

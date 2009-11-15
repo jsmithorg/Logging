@@ -27,6 +27,7 @@
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>Bin\Debug\JSmith.Logging.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,8 +47,31 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
     <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\LogConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\LogRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\LogTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\LogType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LogException.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="LogManager.cs" />
+    <Compile Include="Output\ConsoleLogOutput.cs" />
+    <Compile Include="Output\DebugLogOutput.cs" />
+    <Compile Include="Output\FormattedMessage.cs" />
+    <Compile Include="Output\LogOutput.cs" />
+    <Compile Include="Output\LogOutputFactory.cs" />
+    <Compile Include="Output\SOSLogOutput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\VersionInfo.cs" />
   </ItemGroup>

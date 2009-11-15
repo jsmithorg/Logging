@@ -1,0 +1,9 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="Logging.Tests\bin\Debug\JSmith.Logging.Tests.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto">
+    <assembly path="Logging.Tests\bin\Release\JSmith.Logging.Tests.dll" />
+  </Config>
+</NUnitProject>
